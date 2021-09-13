@@ -1,24 +1,27 @@
 # Development-Guide-Lines
 
+**DataBases**
+
 Whether MongoDB, MySQL, or another database format, all databases must use the following conventions:
 
-Table or collection names must be the pluralized version of the asset they contain and must be snake cased. For example, a table containing search queries might be search_queries whereas a collection containing real estate agent user data might be agents.
+Table or collection names must be the pluralized version of the asset they contain and must be snake cased. For example, a table containing search queries might be `search_queries` whereas a collection containing real estate agent user data might be agents.
 
 Table column and document field names must be snake cased and should describe the data they contain. Abbreviations are to be avoided unless they are common enough for a layperson to recognize.
 
-Good: first_name, street_address, phone_number.
+Good: `first_name`, `street_address`, `phone_number`.
 
-Bad: fname, addr, PhoneNumber
+Bad: `fname`, `addr`, `PhoneNumber`
 
-Column and field names must not contain the the name of the collection or table unless absolutely necessary for clarity. Consider the aforementioned agents collection:
+Column and field names must not contain the the name of the collection or table unless absolutely necessary for clarity. Consider the aforementioned `agents` collection:
 
-Good: first_name, last_name, brokerage_id
+Good: `first_name`, `last_name`, `brokerage_id`
 
-Bad: agent_phone_number, agent_first_name
+Bad: `agent_phone_number`, `agent_first_name`
 
 In general, related fields should be grouped together. When in doubt, arrange fields in alphabetical order.
 
 **Embedded Documents**
+
 Document-oriented database formats such as MongoDB allow for the embedding of documents inside of other documents. Embedded documents should only be used on data that is connected to the parent document and only the parent document and never needs to be accessed without the parent document.
 
 For example, multiple Billing Addresses for a User could be added as embedded documents.
