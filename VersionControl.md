@@ -26,7 +26,7 @@ Bad: `SalesforceTransactionSync`
 
 **Branches**
 
-Once a project has gone live, the `master` or main branch must always be stable. It should be safe to deploy the `master` branch to production at all times. All branches are assumed to be active; stale branches should get cleaned up accordingly.
+Once a project has gone live, the `master` or `main` branch must always be stable. It should be safe to deploy the `master` branch to production at all times. All branches are assumed to be active; stale branches should get cleaned up accordingly.
 
 Avoid committing directly to `master`. Updates should never be merged to `master` by anyone except the project’s lead developer.
 
