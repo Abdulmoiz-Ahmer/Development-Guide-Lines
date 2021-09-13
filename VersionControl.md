@@ -1,40 +1,47 @@
 # Development-Guide-Lines
 
-All repositories use Git and are hosted on either GitHub or CodeCommit.
+**Version Control**
+
+All repositories use `Git` and are hosted on either `GitHub` or `CodeCommit`.
 
 **Repository Naming**
+
 If a repository contains the source code of the a site, its name should be the main naked domain name of that site. It should be lowercased:
 
-Good: mooveguru.com
+Good: `mooveguru.com`
 
-Bad: www.mooveguru.com, https://homekeepr.com
+Bad: `www.mooveguru.com`, `https://homekeepr.com`
 
 Sites hosted on a subdomain may include the subdomain:
 
-Good: home.homekeepr.com
+Good: `home.homekeepr.com`
 
-Bad: homekeepr.com-home
+Bad: `homekeepr.com-home`
 
 If the repository concerns something else, for example a cron script, its name should be descriptive and must be kebab-cased.
 
-Good: cron-salesforce-transaction-sync
+Good: `cron-salesforce-transaction-sync`
 
-Bad: SalesforceTransactionSync
+Bad: `SalesforceTransactionSync`
 
 **Branches**
-Once a project has gone live, the master or main branch must always be stable. It should be safe to deploy the master branch to production at all times. All branches are assumed to be active; stale branches should get cleaned up accordingly.
 
-Avoid committing directly to master. Updates should never be merged to master by anyone except the project’s lead developer.
+Once a project has gone live, the `master` or main branch must always be stable. It should be safe to deploy the `master` branch to production at all times. All branches are assumed to be active; stale branches should get cleaned up accordingly.
+
+Avoid committing directly to `master`. Updates should never be merged to `master` by anyone except the project’s lead developer.
 
 **Repositories in Development**
-All code bases that are in progress will have at least two branches: master and develop. Avoid commiting to master, always commit to develop. Feature branches should be branched from develop. Commits may be made directly to develop, though feature branches are strongly encouraged.
+
+All code bases that are in progress will have at least two branches: `master` and develop. Avoid commiting to `master`, always commit to develop. Feature branches should be branched from develop. Commits may be made directly to develop, though feature branches are strongly encouraged.
 
 Once the project is ready for production, the develop branch will be dropped.
 
 **Repositories in Production**
-All commits to master must be made through feature branches.
+
+All commits to `master` must be made through feature branches.
 
 **Naming**
+
 There's no strict ruling on feature branch names. Branch names must be clear enough to know what
 
 they're for and must be kebab-cased.
@@ -44,6 +51,7 @@ Good: feature-mailchimp, fix-deliverycosts or issue-sage-2766
 Bad: feature/mailchimp-integration, random-things, develop
 
 **Work in Progress**
+
 All work in progress must be pushed to the remote repository frequently as no code should live solely on an individual contributor’s local machine. At an absolute minimum all code must be pushed at the end of each working day. This ensures that works in progress are available to the entire team should you need help with a complex problem, have a question about how to organize or structure something, or are out of office and another member needs to reference the code being written. Additionally it ensures that a backup of your work exists in case your computer crashes, your files get deleted, or your local machine is otherwise unavailable.
 
 **Commits**
@@ -78,7 +86,7 @@ Pull Requests
 In order to merge code to be deployed to staging or production a pull request must be created and submitted for review. All code must be reviewed by the project’s lead developer.
 
 **Merging and Rebasing**
-To avoid merge conflicts, your feature branch should be kept up to date by rebasing regularly. In order to keep default branches clean, use --squash when merging to master or develop:
+To avoid merge conflicts, your feature branch should be kept up to date by rebasing regularly. In order to keep default branches clean, use --squash when merging to `master` or develop:
 
 
 $ git merge <branch> --squash
@@ -164,12 +172,12 @@ Similar to shell aliases, Git provides a mechanism for creating aliases. This ca
 	aacm = !git add -A . && git commit -m
 	cp = cherry-pick
 	amend = commit --amend -m
-	master = !git checkout master && git pull origin 
+	`master` = !git checkout `master` && git pull origin 
 	po = push origin
-	pom = push origin master
+	pom = push origin `master`
 	poh = push origin HEAD
 	plo = pull origin
-	plom = pull origin master
+	plom = pull origin `master`
 	ploh = pull origin HEAD
 	unstage = reset --soft HEAD^
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
