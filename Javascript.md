@@ -4,9 +4,11 @@
 **JavaScript**
 
 **Line Length**
+
 Lines shouldn’t be longer than 100 characters, and mustn’t be longer than 120 characters. Comments mustn’t be longer than 80 characters.
 
 **Quotes**
+
 Use single quotes if possible. If you need multiline strings or interpolation, use template strings.
 
 ```
@@ -43,11 +45,13 @@ function createLabel(text){
 ```
 
 **Semicolons**
+
 ```
 Always.
 ```
 
 **Variable Assignment**
+
 Prefer const over let. Only use let to indicate that a variable will be reassigned. Never use var.
 
 ```
@@ -61,6 +65,7 @@ person.name = 'Seb';
 ```
 
 **Variable Names**
+
 Variable names generally shouldn’t be abbreviated, should always be singular and use camel casing.
 
 ```
@@ -76,6 +81,7 @@ function saveUser(u){
 ```
 
 **Comparisons**
+
 Always use a triple equal to do variable comparisons. If you’re unsure of the type, cast it first.
 
 ```
@@ -97,6 +103,7 @@ if(one == another){
 ```
 
 **Function Keyword vs. Arrow Functions**
+
 Function declarations should use the function keyword.
 
 ```
@@ -121,6 +128,13 @@ $('a').on('click', function (){
   window.location = $(this).attr('href');
 });
 ```
+
+To learn more about the this keyword in JavaScript, refer to:
+
+[this on Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+[Gentle Explanation of "this" in JavaScript by Dmitri Pavlutin](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+
 Object methods must use the shorthand method syntax.
 
 ```
@@ -143,7 +157,7 @@ export default {
 };
 ```
 
-Object and Array Destructuring
+**Object and Array Destructuring**
 
 Destructuring is preferred over assigning variables to the corresponding keys.
 
@@ -159,7 +173,7 @@ const hours = time[0];
 const minutes = time[1];
 ```
 
-Destructuring is very valuable for passing around configuration-like objects.
+Destructuring is very valuable **for** passing around configuration-like objects.
 
 ```
 function uploader({
@@ -174,8 +188,9 @@ function uploader({
 ```
 
 
-Classes
-Classes must be defined using a class declaration and not via class expression or function-based syntax. Class names must use pascal case.
+**Classes**
+
+Classes must be defined using a **class declaration** and not via **class expression** or **function-based syntax**. Class names must use pascal case.
 
 ```
 // Good
@@ -213,7 +228,9 @@ Agent.prototype.getContacts = function() {
 }
 ```
 
-Maps vs. Objects
+**
+Maps vs. Objects**
+
 For storing keyed values—such as a collection of Agents or locations by ID or slug—maps must be used instead of objects. Maps offer several advantages over objects for storing data, mainly that maps are iteratable, preserve key order, does not contain any default keys (only what is explicitly put in it), and it’s size can be determined via its size property.
 
 ```
@@ -282,4 +299,6 @@ const addressList = {
 	}
 };
 ```
+For more information on Maps refer to the documentation on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
+
 
