@@ -13,13 +13,13 @@ Use single quotes if possible. If you need multiline strings or interpolation, u
 
 ```
 // Good
-const company = 'MooveGuru';
+const company = 'YardCrm';
 
 // Bad, single quotes can be used here.
-const company = "MooveGuru";
+const company = "YardCrm";
 
 // Bad, single quotes can be used here.
-const company = 'MooveGuru';
+const company = 'YardCrm';
 
 // Good
 function greet(name) {
