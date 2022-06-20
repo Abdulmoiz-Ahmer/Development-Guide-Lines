@@ -21,23 +21,6 @@ Component names should be descriptive and should not conflict with HTML element 
 <Button/>
 ```
 
-Components—including stateless ones—should always be defined with the class syntax and not as a function component. While it may be more verbose for stateless components, this gives us consistency in our definitions and allows components to be expanded upon without having to be rewritten and negates the need to rely on ** Hooks.**
-
-```
-// Good
-class SubmitButton extends React.Component{
-  // ...
-  
-  render(){
-    // ...
-  }
-}
-
-// Bad, this doesn't use the class syntax and it uses
-// an arrow function rather than the `function` keyword
-const SubmitButton = (props) => {
-  // ...
-};
 ```
 **
 Attributes**
@@ -109,13 +92,6 @@ class Layout extends Component{
 
 In a traditional MVC framework logic is kept from the View by way of Controllers. Data is kept separate from both by way of Models. This concept can be preserved by breaking components into components that specifically handle the “view” and containing components that handle the logic with the database layer handled by separate service functions and classes. 
 
-**Hooks**
-
-Hooks are unnecessary as all components will be defined as classes.
-
-**Styling**
-
-External CSS stylesheets should be preferred to inline styles and CSS-in-JS where ever possible.
 
 **Types**
 
