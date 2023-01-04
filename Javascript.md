@@ -18,9 +18,6 @@ const company = 'YardCrm';
 // Bad, single quotes can be used here.
 const company = "YardCrm";
 
-// Bad, single quotes can be used here.
-const company = 'YardCrm';
-
 // Good
 function greet(name) {
   return 'Hello ${name}!';
