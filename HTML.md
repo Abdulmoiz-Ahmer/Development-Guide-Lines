@@ -72,7 +72,7 @@ Content should follow a clear and sensical hierarchical flow.
   
 ```
 <article>
-  <h1>Semantics in HTML</h2>
+  <h1>Semantics in HTML</h1>
 
   <img src="/path/to/image.jpg" alt="text describing the image">
  
@@ -104,7 +104,7 @@ Content should follow a clear and sensical hierarchical flow.
 ```
 <article>
   <img src="/path/to/image.jpg" alt="text describing the image">
-  <h1>Semantics in HTML</h2>
+  <h1>Semantics in HTML</h1>
  
   <section>
     <h3>Section title</h3>
