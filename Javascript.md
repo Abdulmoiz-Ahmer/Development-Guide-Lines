@@ -138,7 +138,7 @@ const scrollTo = (offset) => {
   // ...
 };
 ```
-
+Avoid anonymous functions expressions or arrow functions as much as possible since they are harder for debugging.
 Anonymous functions should use arrow functions, unless they need to access `this`.
 
 ```
