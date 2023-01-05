@@ -49,7 +49,7 @@ Always.
 
 **Variable Assignment**
 
-Prefer const over let. Only use let to indicate that a variable will be reassigned. Never use var.
+Prefer const over let. Only use let to indicate that a variable will be reassigned. 
 
 ```
 // Good
@@ -60,6 +60,29 @@ person.name = 'Seb';
 let person = { name: 'Sebastian' };
 person.name = 'Seb';
 ```
+
+
+Use var where it makes sense to for instance:
+```
+// Good
+var assignment;
+try{
+	assignment = //...
+}catch(error){
+	//...
+}
+
+//Bad
+try{
+	let assignment = //...
+}catch(error){
+	//...
+}
+
+
+```
+
+
 
 **Variable Names**
 
