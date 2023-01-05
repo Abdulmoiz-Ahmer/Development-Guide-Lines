@@ -11,7 +11,7 @@ Properties must be arranged in alphabetical order.
 **
 **Naming****
 
-As with variables, always use singular naming for readability. Use kebab-case.
+As with variables, always use singular naming for readability. Use kebab-case or even bem model(https://getbem.com/introduction/).
 
 **Good:**
 
