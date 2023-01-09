@@ -3,6 +3,17 @@
 
 **JavaScript**
 
+**Letter Case Definitions**
+
+Use camelCase for JavaScript data types like variables, arrays, objects, functions, etc.
+
+```
+const getLastDigit = () => { ... }
+
+const userTypes = [ ... ]
+
+```
+
 **Line Length**
 
 Lines shouldn’t be longer than 100 characters, and mustn’t be longer than 120 characters. Comments mustn’t be longer than 80 characters.
