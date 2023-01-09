@@ -2,21 +2,21 @@
 
 **Version Control**
 
-All repositories use `Git` and are hosted on either `GitHub` or `CodeCommit`.
+All repositories use `Git` and are hosted on either `GitHub` or `CodeCommit` or `Git Lab`.
 
 **Repository Naming**
 
 If a repository contains the source code of the a site, its name should be the main naked domain name of that site. It should be lowercased:
 
-Good: `mooveguru.com`
+Good: `pei.com`
 
-Bad: `www.mooveguru.com`, `https://homekeepr.com`
+Bad: `www.pei.com`, `https://pei.com`
 
 Sites hosted on a subdomain may include the subdomain:
 
-Good: `home.homekeepr.com`
+Good: `dev.pei.com`
 
-Bad: `homekeepr.com-home`
+Bad: `pei.com-dev`
 
 If the repository concerns something else, for example a cron script, its name should be descriptive and must be kebab-cased.
 
