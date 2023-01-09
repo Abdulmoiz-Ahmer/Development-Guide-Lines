@@ -265,6 +265,7 @@ const List = () => {
   );
 };
 ```
+
 **Use Fragments over html elements**
 
 ```
@@ -383,7 +384,7 @@ const ScreenDimensions = () => {
 
 ```
 
-Avoid huge components
+**Avoid huge components**
 Whenever it is possible, split your component into smaller chunks. Often applicable when you are using conditional rendering or defining the columns for a data grid, etc. Also applicable when a lot of custom hooks are used — check the section above.
 
 ```
@@ -447,6 +448,7 @@ const [password, setPassword] = useState('')
 // Good
 const [user, setUser] = useState({})
 ```
+
 If something can be derived from one state but can't be group with another state it shouldn't be state.
 
 **Use shorthand for boolean props**
@@ -470,6 +472,7 @@ If something can be derived from one state but can't be group with another state
 ```
 
 **Avoid using inline styles**
+
 Ideally, use some third party for handling styles like CSS modules, JSS, styled-components, etc. or create a custom hook.
 
 ```
@@ -525,6 +528,7 @@ if (role === Roles.admin) {
 **Don’t use third-party libraries directly**
 
 Instead of importing the third-party libraries directly, re-export them in one centralised place.
+
 ```
 src/lib/store.ts
 
@@ -534,7 +538,9 @@ src/lib/query.ts
 
 export { useQuery, useMutation, useQueryClient } from 'react-query';
 ```
+
 **Rely on abstraction instead of the implementation**
+
 ```
 // Bad directly using momemt
 import moment from 'moment';
@@ -575,7 +581,9 @@ const updateProduct = (product) => {
   });
 };
 ```
+
 **Prefer declarative programming**
+
 // Bad imperative: dealing with internals of array iteration
 ```
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -632,9 +640,9 @@ function createPerson(person) {
 ```
 
 **Use object destructuring**
-```
 
-// ❌
+```
+// Bad
 return (
   <>
     <div> {user.name} </div>
@@ -643,7 +651,7 @@ return (
   </>  
 )
 
-// ✅
+// Good
 const { name, age, profession } = user;
 
 return (
@@ -656,8 +664,8 @@ return (
 ```
 
 **Prefer using template literals**
-```
 
+```
 // Bad
 const userName = user.firstName + " " + user.lastName;
 
@@ -666,6 +674,7 @@ const userDetails = `${user.firstName} ${user.lastName}`;
 ```
 
 **Use implicit return in small functions**
+
 ```
 // Bad
 const add = (a, b) => {
